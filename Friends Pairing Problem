@@ -1,0 +1,20 @@
+public class Recursion{
+    public static int pairingWays(int n){
+        if(n==1 || n==2){
+            return n;
+        }
+
+        //Choice
+        //single
+        int fnm1 = pairingWays(n-1);
+
+        //pairs
+        int fnm2 = pairingWays(n-2);
+
+        return fnm1 + (n-1)*fnm2;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(pairingWays(3));
+    }
+}
