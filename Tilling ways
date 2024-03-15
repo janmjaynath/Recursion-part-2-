@@ -1,0 +1,20 @@
+public class Recursion{
+    public static int tillingWays(int n){
+        if(n==0 || n==1){
+            return 1;
+        }
+        //Vertical Choice
+        int  vert = tillingWays(n-1);
+
+        //Horizontal Choice 
+        int hort = tillingWays(n-2);
+
+        return  vert + hort;
+
+
+    }
+    public static void main(String[] args) {
+        System.out.println("Number of ways are : "+tillingWays(4));
+    }
+
+}
